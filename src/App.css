@@ -1,38 +1,42 @@
 .App {
   text-align: center;
+  margin: 20px; /* Reduced margin for smaller screens */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  width: 80%;  /* Responsive width */
+  max-width: 300px;  /* Maximum width */
+  height: 50px;  /* Button height */
+  margin: 10px auto;  /* Center and space buttons */
+  display: block;  /* Align buttons vertically */
+  font-size: 18px;  /* Font size */
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.progress-container {
+  width: 100%;  /* Full width container */
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  height: 30px;  /* Progress bar height */
+  margin-top: 20px;
+}
+
+.progress-bar {
+  background-color: #4caf50;  /* Green progress bar */
+  height: 100%;  /* Fill container height */
+  border-radius: 5px;
+  transition: width 0.5s ease;  /* Smooth width transition */
+}
+
+/* Media Queries for smaller screens (like mobile phones) */
+@media (max-width: 600px) {
+  button {
+    font-size: 16px;  /* Smaller font size for mobile */
+    height: 45px;  /* Smaller button height */
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .progress-container {
+    height: 25px;  /* Smaller progress bar height */
   }
 }
